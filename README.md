@@ -1,7 +1,7 @@
 # Kaggle-Titanic
 Recently, I started to do some small projects on Kaggle. This is my first project on Kaggle alone. There is a summary about this project.
 
-The data are more than 10 dimensions, including age, sex, fare and etc. In the project, I first pre-process data. combine the train data and test data, then find more features.
+The data are more than 10 dimensions, including Age, Sex, Fare etc. In the project, I first pre-process data. combine the train data and test data, then find more features.
 Some pre-processing as follows:
 1. Use names to extract the titles and then simply classify some categories, including:
 Title_Dictionary = {
@@ -24,7 +24,7 @@ Title_Dictionary = {
     "Lady" : "Royalty"
 }
 
-2. Group by using the information sex,pclass and title to fill the empty.
+2. Group by using the information Sex, Pclass and Title to fill the empty.
 3. Use pandas function to get dummies (one hot encoding)
 There are more methods to pre-process data, please view source code.
 
