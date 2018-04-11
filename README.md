@@ -32,16 +32,20 @@ After pre-processing data, i began to use many classification algorithms to clas
 Use random forest to select the features, relevant codes as follows:
 
 #clf = RandomForestClassifier(n_estimators=50, max_features='sqrt')
+
 #clf = clf.fit(train[predictors], targets)
+
 #model = SelectFromModel(clf, prefit=True)
 
 In the model, parameters are very important, here one method called grid-search could help you find optimized parameter for model.
 
 #grid_search.fit(train[predictors], targets)
+
 #model = grid_search
+
 #parameters = grid_search.best_params_
 
 Sometimes, we could use multiple models to vote for the final prediction. However, for the simple data set, Blending different models dose not have good result apparently.
-To summarize, this is my first time to try do projects on Kaggle alone. titanic is the simple project and lots of resources and tutorials could been found online.
+To summarize, this is my first time to try do projects on Kaggle alone. Titanic is the simple project and lots of resources and tutorials could been found online.
 
 Reference: https://ahmedbesbes.com/how-to-score-08134-in-titanic-kaggle-challenge.html
