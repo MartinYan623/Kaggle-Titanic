@@ -278,8 +278,8 @@ if run_gs:
     print('Best parameters: {}'.format(grid_search.best_params_))
 
 else:
-    parameters = {'bootstrap': False, 'min_samples_leaf': 1, 'n_estimators': 20,
-                  'min_samples_split': 10, 'max_features': 'log2', 'max_depth': 10}
+    parameters = {'bootstrap': False, 'min_samples_leaf': 5, 'n_estimators': 50,
+                  'min_samples_split': 5, 'max_features': 'log2', 'max_depth': 10}
     model = RandomForestClassifier(**parameters)
     model.fit(train[predictors], targets)
 
@@ -320,7 +320,7 @@ submission = pd.DataFrame({
         "Survived": predictions
     })
 print(submission)
-submission.to_csv('/Users/martin_yan/Desktop/submission11.csv', index=False)
+submission.to_csv('/Users/martin_yan/Desktop/submission3.csv', index=False)
 
 """
 # 用到的特征
